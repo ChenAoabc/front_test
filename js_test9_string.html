@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// String template
+        var name="John";
+        //使用‘`’包括模板字符串,使用${}来插入变量或者表达式
+        var txt=`Hello World!${name}`;
+        debugger;
+        console.log(txt); // Output: Hello World!John
+        function myfunction(){
+            var name="Mary";
+            var txt=`Hello ${name}!`;
+            alert(txt); // Output: Hello Mary!
+        }
+	</script>
+</head>
+<body>
+    <!-- HTML content goes here -->
+        <h1>JavaScript Test 9 - String</h1>
+        <h2>String 描述</h2>
+        <p> 在javascript中使用字符串来处理和存储文本信息。字符串是不可变的，
+            这意味着它们的值一旦创建就不能改变。
+            字符串可以用单引号或双引号括起来，
+            也可以不用括起来。
+            JavaScript提供了许多内置的方法来操作字符串
+            如：
+            1、length()方法获取字符串长度，
+            2、字符串可以用+运算符连接，
+            3、也可以用数组的join()方法连接。
+            4、字符串也可以用charAt()方法获取单个字符，
+            5、用substring()方法获取子字符串，
+            6、用replace()方法替换字符串中的部分内容。
+            等等</p>
+        <h2>字符串转义：</h2>
+        <p> 在JavaScript中，字符串可以包含一些特殊字符，如单引号、双引号、反斜杠等。
+            如果字符串中包含这些特殊字符，则需要进行转义，以免影响代码的运行。
+            转义字符是以反斜杠开头的字符，如\n、\t、\b等。
+
+            转义字符的作用是告诉JavaScript引擎，后面的字符不是普通字符，
+            而是特殊含义的字符。
+            例如，\n表示换行符，\t表示制表符，\b表示退格符。</p>
+        <h2>字符串模板：</h2>
+        <p>JavaScript 中的模板字符串是一种方便的字符串语法，
+            允许你在字符串中嵌入表达式和变量。 
+        </p>
+        <h2> 代码调试</h2>
+        <p> 在JavaScript中，你可以使用debugger语句来调试代码。
+            当程序运行到debugger语句时，会暂停程序的执行，并进入调试环境。
+            当然你也可以在你的代码中打入断点，然后单步执行代码。
+        </p>
+        <button onclick="myfunction()">Click me</button>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test21</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <h1>JavaScript Test 20: DOM summary</h1>
+    <p>
+        1、什么是DOM？<br>
+            <span>
+                DOM：文档对象模型（document object model）是w3c组织推荐的处理可扩展置标语言的标准编程接口。
+                （是一套标准规则，定义了如何通过脚本来操纵网页的各个部分）<br>
+                DOM定义了网页的结构、内容和行为，通过DOM，可以轻松地对网页的各个部分进行操作。<br>
+            </span>
+        2、什么是DOM树？<br>
+            <span>
+                DOM把整个页面表示为一个树形结构，每个节点都是一个对象，包含了节点类型、属性、子节点、
+                文本内容等信息。<br>
+            </span>
+        3、如何创建元素节点？<br>
+            <span>
+                可以通过DOM的createNode方法来创建节点，该方法接收一个节点类型和一个属性对象作为参数，
+                返回一个新创建的节点对象.<br>
+            </span>
+        3.1、如何将元素节点写入DOM树中？<br>
+            <span>
+                可以通过父节点的相关方法来将新创建的节点添加到DOM树中。<br>
+                如：1、appendChild方法将新创建的节点添加到父节点的子节点列表中。<br>
+                2、insertBefore方法将新创建的节点插入到指定位置。<br>
+                3、replaceChild方法将指定子节点替换为新创建的节点。<br>
+            </span>
+        4、如何获取元素节点？<br>
+            <span>
+                可以通过DOM的getElementById、getElementByTagName、<br>
+                getElementsByClassName等方法来获取节点。<br>
+            </span>
+        5、如何修改元素节点？<br>
+            <span>
+                可以通过节点的相关属性和方法来修改节点的内容、属性、样式。<br>
+                如：1、节点的innerHTML属性可以修改节点的innerHTML内容。<br>
+                2、节点的style属性可以修改节点的样式。<br>
+                3、节点的attribute（具体属性名）可以设置节点的属性。<br>
+            </span>
+        6、如何删除元素节点？<br>
+            <span>
+                可以通过父节点的removeChild方法来删除节点。<br>
+            </span>
+        8、如何给元素节点添加事件？<br>
+            <span>
+                1、可以通过addEventListener方法给节点添加事件。<br>
+                2、通过节点的事件属性也可以给节点配置事件。<br>
+            </span>
+        9、如何遍历DOM树？<br>
+            <span>
+                可以通过父节点的childNodes属性来遍历DOM树。<br>
+            </span>
+        10、什么是事件流？<br>
+            <span>
+                事件流描述的是从页面中某个元素到达另一个元素的过程。<br>
+                事件流包括三个阶段：事件捕获阶段、事件目标阶段、事件冒泡阶段。<br>
+            </span>
+        11、什么是事件对象？<br>
+            <span>
+                事件对象是事件处理程序所接收到的参数，包含了与事件相关的信息，如事件类型、<br>
+                事件源、鼠标位置、键盘按键等。<br>
+            </span>
+        12、什么是HTMLCollection？<br>
+            <span>
+                HTMLCollection是HTML元素的集合，可以通过document.getElementsByTagName、<br>
+                document.getElementsByClassName等方法来获取。<br>
+            </span>
+        13、什么是NodeList？<br>
+            <span>
+                NodeList是DOM节点的集合，可以通过document.querySelectorAll方法来获取。<br>
+            </span>
+
+    </p>
+</body>
+</html>

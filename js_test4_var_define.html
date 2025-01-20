@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <h1>JavaScript var definition</h1>
+    <p>use 'var' keyword to declare variables in JavaScript</p>
+
+    <p> declare number variable: var length = 16;</p>
+    <p id="var-number"></p>
+
+    <p> declare number variable: var length = x * 10;</p>
+    <p id="var-number-express"></p>
+
+    <p> declare string variable: var lastName ="Johnson";</p>
+    <p id="var-string"></p>
+
+    <p> declare array variable: var cars = ["Saab", "Volvo", "BMW"];</p>
+    <p id="var-array"></p>
+
+    <p> declare object variable: var person = {firstName:"John", lastName:"Doe"};</p>
+    <p id="var-object"></p>
+    
+    <!-- HTML content goes here -->
+    <script type="text/javascript">
+
+        // Number 通过数字字面量赋值
+		var length = 16;                                  
+        document.getElementById("var-number").innerHTML = length;
+
+
+        // Number 通过表达式字面量赋值
+        var points = 12 * 10;                              
+        document.getElementById("var-number-express").innerHTML = points;
+
+        // String 通过字符串字面量赋值
+        var lastName = "Johnson"; 
+        document.getElementById("var-string").innerHTML = lastName;
+
+        // Array  通过数组字面量赋值
+        var cars = ["Saab", "Volvo", "BMW"];
+        document.getElementById("var-array").innerHTML = cars;
+        
+        // Object 通过对象字面量赋值
+        var person = {firstName:"John", lastName:"Doe"}; 
+        document.getElementById("var-object").innerHTML = person;
+        // One laguage can have multiple ways to declare variables.
+        var x=10, y=20, z=30; // Multiple variables can be declared in one line.
+	</script>
+</body>
+</html>

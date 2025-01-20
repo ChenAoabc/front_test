@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+        // define variables of booleans type
+		var boolFalse=false;
+        var boolTrue=true;
+        typeof(boolFalse); // "boolean"
+        typeof(boolTrue); // "boolean"
+
+        // define variables of undefined type
+        var undefinedVar;
+        typeof(undefinedVar); // "undefined"
+
+        // define variables of null type
+        var nullVar=null;
+        typeof(nullVar)
+
+        // define values of object type
+        var arry=new Array();
+        arry[0]="Hello";
+        arry[1]="World";
+        typeof(arry); // "object"
+
+        // define obejct variable
+        var obj=new Object();
+        obj.name="john";
+        obj.age=30;
+        typeof(obj); // "object"
+
+        // define variables of function type
+        function myFunction(){
+            return "Hello World";
+        }
+        typeof(myFunction); // "function"
+
+    </script>
+</head>
+<body>
+    <!-- HTML content goes here -->
+     <p1>JavaScript DataTypes</p1>
+     <ol>
+         <li>
+            <span>值类型：</span>
+            <ol>
+                <li>字符串（String）</li>
+                <li>数字（Number）</li>
+                <li>布尔值（Boolean）</li>
+                <li>空值（null）</li>
+                <li>未定义值（undefined）</li>
+                <li>符号类型（Symbol）</li>
+            </ol>
+        </li>
+         <li>
+            <span>引用类型：</span>
+            <ol>
+                <li>对象（Object）</li>
+                <li>数组（Array）</li>
+                <li>函数（Function）</li>
+            </ol>
+        </li>
+        <li>
+            <span>两个特殊类型：</span>
+            <ol>
+                <li>日期类型（Date）</li>
+                <li>正则表达式类型（RegExp）</li>
+            </ol>
+        </li>
+     </ol>
+     <h1>
+        可以通过使用typeof()函数判断变量类型
+     </h1>
+    </body>
+</html>

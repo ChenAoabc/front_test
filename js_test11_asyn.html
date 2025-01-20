@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript 异步编程</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <h1>JavaScript 异步编程</h1>
+    <p>JavaScript 语言的异步编程是指在执行某个任务时，主线程（即当前正在执行的 JavaScript 代码）并不会被阻塞，
+        而是继续执行后续代码，待任务完成后再通知主线程。这样可以提高程序的响应速度，适用于那些耗时较长的操作。
+        异步编程的实现方式有多种，常见的有回调函数、事件监听、Promise 对象、Generator 函数等。
+        本文将介绍 JavaScript 异步编程的基本概念和常用方法。
+    </p>
+    <img src="./img/异步、同步对比.png" 
+        alt="JavaScript 异步编程">
+    <!-- HTML content goes here -->
+     <h1>什么时候使用异步编程？</h1>
+     <p>异步编程的使用场景主要有以下几种：</p>
+     <ul>
+             <li>耗时任务：如网络请求、文件读写、大数据处理等。</li>
+             <li>事件驱动：如用户输入、鼠标移动、页面滚动等。</li>
+             <li>定时任务：如 setInterval、setTimeout。</li>
+             <li>回调函数：如 setTimeout、setInterval。</li>
+     </ul>
+     <h1>例子</h1>
+     <p>下面是一个异步编程的例子，使用 setTimeout 函数模拟一个延迟 5 秒的异步操作：</p>
+     <pre> </pre>
+     <button onclick="time()">点击后、回调函数等待 3 秒后执行。</button>
+     <p id="demo"></p>
+     <p>
+         子线程设置的定时器，与主线程执行不存在必然关系。
+     </p>
+     <p id="demo2">
+        
+     </p>
+     <script type="text/javascript">
+        function showTime() {
+            document.getElementById("demo").innerHTML = "Hello, world!";
+        }
+        function time(){
+            setTimeout(showTime, 3000);
+        }
+        document.getElementById("demo2").innerHTML="RUNOOB-2!";
+       
+     </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test20</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <!-- HTML content goes here -->
+    <h1> JavaScript Test 20: DOM NodeList </h1>
+    <p>NodeList 对象是一个从文档中获取的节点列表 (集合) 。</p>
+    <p>NodeList 和HTMLCollection对象类似，下面对其进行对别</p>
+    <p>1、HTMLCollection 是HTML元素的集合，可以通过document.getElementsByTagName()、
+        document.getElementsByClassName()、
+        document.getElementsByName()等方法获取。
+        但是HTMLCollection对象只能通过索引访问其中的元素，
+        即它不是一个数组，不能使用数组的方法。</p>
+    <p>2、NodeList 是DOM中的一个接口，它是由DOM返回的一组节点，
+        可以使用forEach()等方法进行遍历。但需要注意NodeList也不是一个数组，
+        不能使用数组的方法。
+    </p>
+    <p>3、HTMLCollection 和 NodeList 都继承了父类 Collection，
+        所以它们都可以使用item()方法访问其中的元素。</p>
+    <p>4、HTMLCollection 和 NodeList 都可以用length属性来获取其中的元素个数。</p>
+    <p>5、NodeList可以使用forEach()方法遍历其中的元素，但HTMLCollection却不能</p>
+
+
+     <p id="p1">This is the first paragraph.</p>
+     <p id="p2">This is the second paragraph.</p>
+     <p id="p3">This is the third paragraph.</p>
+     <p id="p4">This is the fourth paragraph.</p>
+     <script text="text/javascript">
+         var paragraphs = document.querySelectorAll("p");
+         var paragraphs2 = document.getElementsByTagName("p");
+         // result:NodeList(4) [p#p1, p#p2, p#p3, p#p4]
+         console.log(paragraphs);
+
+         // result:HTMLCollection(4) [p#p1, p#p2, p#p3, p#p4]
+         console.log(paragraphs2);
+
+         console.log(paragraphs.length); // 4
+         console.log(paragraphs2.length); // 4
+
+         paragraphs.forEach(function(p){
+             console.log(p.id);
+         });
+         // 出现语法错误
+        // paragraphs2.forEach(function(p){
+        //     console.log(p.id);
+        // });
+         // 出现语法错误
+        //  var x=paragraphs.pop();
+        //  var y=paragraphs2.pop();
+     </script>
+</body>

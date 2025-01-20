@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript promise Test</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// 执行3个异步任务，并将结果打印到控制台 方式一：使用回调函数
+        new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                document.getElementById("result").innerHTML = "task1";
+                resolve();
+            }, 1000)
+        }).then(
+            function() {
+                return new Promise(function(resolve, reject) {
+                    setTimeout(function() {
+                        document.getElementById("result").innerHTML = "task2";
+                        resolve();
+                    }, 2000)
+                });
+            }
+        ).then(
+            function() {
+                setTimeout(function() {
+                        document.getElementById("result").innerHTML = "task3";
+                        resolve();
+                    }, 4000)
+            }
+        );
+        
+        // 方式二：使用 Promise.all() 方法
+        Promise.all([
+            new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    document.getElementById("result2").innerHTML = "task1";
+                    resolve();
+                }, 1000)
+            }),
+            new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    document.getElementById("result2").innerHTML = "task2";
+                    resolve();
+                }, 2000)
+            }),
+            new Promise(function(resolve, reject) {
+                setTimeout(function() {
+                    document.getElementById("result2").innerHTML = "task3";
+                    resolve();
+                }, 4000)
+            })
+        ]).then(function() {
+            document.getElementById("result2").innerHTML = "all tasks are done";
+        });
+
+        // 方式三：使用 async/await 语法
+        async function asyncFunc() {
+            try {
+                await new Promise(function(resolve, reject) {
+                    setTimeout(function() {
+                        document.getElementById("result3").innerHTML = "task1";
+                        resolve();
+                    }, 1000)
+                });
+                await new Promise(function(resolve, reject) {
+                    setTimeout(function() {
+                        document.getElementById("result3").innerHTML = "task2";
+                        resolve();
+                    }, 2000)
+                });
+                await new Promise(function(resolve, reject) {
+                    setTimeout(function() {
+                        document.getElementById("result3").innerHTML = "task3";
+                        resolve();
+                    }, 4000)
+                });
+            } catch (error) {
+                console.log(error);
+            } finally {
+                document.getElementById("result3").innerHTML = "all tasks are done";
+            }
+        }
+        asyncFunc();
+        
+    </script>
+</head>
+<body>
+    <!-- HTML content goes here -->
+    <h1>什么是Promise？</h1>
+    <p>Promise 是ECMAScript6提供的类 是异步编程的一种解决方案，
+        它代表了一个异步操作的最终完成或失败及其结果值。
+        Promise 提供统一的接口，使得异步操作可以像同步操作一样使用，
+        避免了层层嵌套的回调函数。</p>
+    <h1> 怎么创建Promise？</h1>
+    <p>Promise 是一个构造函数，可以通过 new 关键字来创建。
+        语法如下：
+        new Promise(function(resolve, reject) {
+            // 异步操作
+        }).then(function(value) {
+            // 成功时的回调函数
+        }).catch(function(error) {
+            // 失败时的回调函数
+        }).finally(function() {
+            // 无论成功或失败都会执行的回调函数
+        });
+        其中，
+        1、resolve 和 reject 是两个函数，用于将 Promise 对象的状态从“未完成”变为“成功”或“失败”，
+        可在异步操作后调用这两个方法实现回调函数的传参。
+        2、then 方法用于指定成功时的回调函数，catch 方法用于指定失败时的回调函数，
+        finally 方法用于指定无论成功或失败都会执行的回调函数。
+        3、value 和 error 是 then 和 catch 方法的参数，分别表示 Promise 对象的成功值和失败值。
+        4、Promise 对象可以链式调用，即 then 方法可以返回一个新的 Promise 对象，
+        这样就可以将多个异步操作串行起来，实现更复杂的异步操作。
+    </p>
+
+    <p>Promise 实现的异步操作：</p>
+    <p id="result"></p>
+    <p>Promise.all() 方法实现多个异步操作的串行执行：</p>
+    <p id="result2"></p>
+    <p>async/await 语法实现多个异步操作的串行执行：</p>
+    <p id="result3"></p>
+</body>
+</html>
