@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> create CSS </title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css_file/style1.css">
+    <style type="text/css">
+        p{
+            color: blue;
+            font-size: 18px;
+        }
+        h2{
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 浏览器当读到一个样式表时，会用它来格式化HTML文档 -->
+    <!-- 如何创建样式表？
+        样式表相当于一种寄生在HTML上的文档，
+        它包含了三种创建方式：
+            1. 外部样式表：在HTML文档的head部分通过
+            link标签引入外部样式表文件。
+            2、内部样式表：在HTML文档的head部分通过
+            style标签进行定义。
+            3、内联样式：在HTML标签的style属性中
+            直接定义。（这种方式不推荐使用，耦合度太高，不利于代码的维护）
+        样式表优先级：
+            内联样式 > 内部样式表 > 外部样式表。
+        多重样式（样式继承）：
+            样式表可以继承和重写其他样式，
+            例如，目前内部样式表中定义了h2的字体大小为18px，
+            外部样式表也定义了h2的字体大小为24px，同时定义了h1的颜色为red，
+            那么h1的最终颜色将是red，字体大小将是24px。
+        多重样式的优先级：
+            内联样式 > 内部样式表 > 外部样式表
+
+
+     -->
+            <span>多种样式表的使用</span>
+            <h1>This is a heading</h1>
+            <p>This is a paragraph.</p>
+            <div style="background-color: yellow;">This is a yellow div.</div>
+
+            <span>样式继承</span>
+            <h2>This is a subheading</h2>
+
+</body>
+</html>
