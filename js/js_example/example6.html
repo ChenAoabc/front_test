@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+        <link rel="stylesheet" href="./css/style5.css">
+        <title>Expanding Cards</title>
+    </head>
+    <body>
+        <!-- 页面元素 -->
+        <div class="container">
+            <div class="panel active" style="background-image: url('https://images.unsplash.com/photo-1558979158-65a1eaa08691?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                <h3>Explore the world</h3>
+            </div>
+
+            <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1572276596237-5db2c3e16c5d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80');">
+                <h3>
+                    wild forest
+                </h3>
+            </div>
+            
+            <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80')">
+                <h3>Sunny Beach</h3>
+            </div>
+
+            <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1351&q=80')">
+                <h3>City on Winter</h3>
+            </div>
+
+            <div class="panel" style="background-image: url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80')">
+                <h3>Mountains - Clouds</h3>
+            </div>
+        </div>
+        <!-- 脚本 -->
+        <script>
+            /**
+             * 本例：通过js修改元素的class名称实现样式的切换以及css的flex属性，从而实现图片点击动画的效果
+            */
+
+            // find class name equal to "panel"
+            const panels=document.querySelectorAll('.panel')
+            panels.forEach(panel=>{
+                // add event listener of click event
+                panel.addEventListener('click',()=>{
+                    removeActiveClasses()
+                    panel.classList.add('active')
+                })
+            })
+            // remove active class from all panels
+            function removeActiveClasses(){
+                panels.forEach(panel=>{
+                    panel.classList.remove('active')
+                })
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test18</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <h1>JavaScript Test 18: DOM node</h1>
+    <h1>使用JavaScript创建新的HTML节点</h1>
+    <p>方法1:使用docment.createElement()方法创建新的HTML节点，
+        并将其添加到文档中。</p>
+    <div id="myDiv"></div>
+    <script type="text/javascript">
+        var parent = document.getElementById("myDiv");
+        var br=document.createElement("br");
+		// 向myDiv中添加一个新的段落节点--使用appendChild()方法
+        var newP = document.createElement("p");
+        newP.id = "newP";
+		newP.innerHTML = "This is a new paragraph.";
+        parent.appendChild(newP);
+
+        // 向myDiv中添加一个新的图片节点--使用appendChild()方法
+        var newImg = document.createElement("img");
+        newImg.id = "newImg";
+        newImg.src="./img/image2.jpg"
+        newImg.alt="This is a new image.";
+        parent.appendChild(newImg);
+
+        // 向myDiv中添加一个新的链接节点--使用appendChild()方法
+        var newA = document.createElement("a");
+        newA.href="http://www.baidu.com";
+        newA.innerHTML = "This is a new link.";
+        parent.appendChild(newA);
+        parent.appendChild(br);
+        
+        
+
+        // 在第一个图片之前插入一个新的图片节点--使用insertBefore()方法
+        var newImg2 = document.createElement("img");
+        newImg2.id = "newImg2";
+        newImg2.src="./img/image1.jpg"
+        newImg2.alt="This is a new image.";
+        parent.insertBefore(newImg2, document.getElementById("newImg"));
+        
+
+        // 再向myDiv中插入一个新的图片节点--使用appendChild()方法
+        parent.appendChild(newImg2);
+
+        // 移除div中的一个节点--使用removeChild()方法
+        // 注意:需要提供父节点，用父节点去移除子节点
+        // parent.removeChild(document.getElementById("newP"));
+
+        // 替换div中的一个节点--使用replaceChild()方法
+        // var newP2=document.createElement("p");
+        // newP2.id="newP2";
+        // newP2.innerHTML="This is a new paragraph.";
+        // parent.replaceChild(newImg, 
+        // newP2);
+
+	</script>
+    <!-- HTML content goes here -->
+</body>
+</html>

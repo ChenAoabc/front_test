@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>实现轮播图效果</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <!-- HTML content goes here -->
+     <h1> 实现轮播图效果 </h1>
+        <div id="mydiv">
+            <img id="slide" src="../img/bg1.jpg" alt="bg1">
+        </div>
+        <button onclick="prevSlide()">Prev</button>
+        <button onclick="nextSlide()">Next</button>
+
+        <script type="text/javascript">
+            // define images array and currentIndex
+            let images = ["../img/bg1.jpg", "../img/bg2.jpg", "../img/bg3.jpg"];
+            let alts = ["bg1", "bg2", "bg3"];
+            let currentIndex = 0;
+
+            // show image method
+            function showSlide(index){
+                document.getElementById("slide").src = images[index];
+                document.getElementById("slide").alt = alts[index];
+            }
+
+            // implement prev and next buttons event handlers
+            function nextSlide(){
+                currentIndex=(currentIndex+1)%images.length;
+                showSlide(currentIndex);
+            }
+            function prevSlide(){
+                currentIndex=(currentIndex-1+images.length)%images.length;
+                showSlide(currentIndex);
+            }
+
+            // start slideshow
+            setInterval(nextSlide, 3000);
+        </script>
+</body>
+</html>

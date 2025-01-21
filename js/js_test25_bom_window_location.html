@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript Test</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* CSS code goes here */
+    </style>
+	<script type="text/javascript">
+		// code goes here
+	</script>
+</head>
+<body>
+    <h1><h1>JavaScript Test 25: BOM Window Location Object</h1></h1>
+    <!-- HTML content goes here -->
+     <h2>window.location 对象用以获得当前页面的地址（URL） 
+        并将浏览器重新定向到新的页面。</h2>
+     <p>window.location.href 获得当前页面的完整 URL。</p>
+     <script>
+         // 输出当前页面的完整 URL
+         document.write("当前页面的完整 URL：" + window.location.href);
+     </script>
+     <p>window.location.protocol 获得当前页面的协议。</p>
+     <script>
+        // 输出当前页面的协议
+        document.write("当前页面的协议：" + window.location.protocol);
+    </script>
+     <p>window.location.host 获得当前页面的域名主机。</p>
+     <script>
+        // 输出当前页面的域名主机
+        document.write("当前页面的域名主机：" + window.location.host);
+    </script>
+     <p>window.location.hostname 获得当前页面的域名。</p>
+     <script>
+         // 输出当前页面的域名主机名称
+        document.write("当前页面的域名主机名称：" + window.location.hostname);
+     </script>
+     <p>window.location.port 获得当前页面的端口号。</p>
+     <script>
+         // 输出当前页面的端口号
+        document.write("当前页面的端口号：" + window.location.port);
+     </script>
+     <p>window.location.pathname 获得当前页面的路径名。</p>
+     <script>
+         // 输出当前页面的路径名
+        document.write("当前页面的路径名：" + window.location.pathname);
+     </script>
+     <p>window.location.search 获得当前页面的查询字符串。</p>
+     <script>
+         // 输出当前页面的查询字符串
+        document.write("当前页面的查询字符串：" + window.location.search);
+     </script>
+     <p>window.location.hash 获得当前页面的锚点。</p>
+     <script>
+         // 输出当前页面的锚点
+         document.write("当前页面的锚点：" + window.location.hash);
+     </script>
+     <p>window.location.assign() 方法可以重新定向到新的页面。</p>
+     <script>
+            // 重新定向到新的页面
+           // window.location.assign("http://www.baidu.com");
+     </script>
+     <p>window.location.replace() 方法可以将当前页面替换成新的页面。</p>
+     <script>
+             // 重新加载当前页面
+             //window.location.replace("http://www.baidu.com");
+     </script>
+     <p>window.location.reload() 方法可以重新加载当前页面。</p>
+     <script>
+             // 重新加载当前页面
+              window.location.reload();
+     </script>
+</body>
+</html>

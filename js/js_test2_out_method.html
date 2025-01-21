@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript out method</title>
+	<script type="text/javascript">
+		// js out method 1-by Console.log()
+		console.log("Hello, World!");
+		// js out method 2-by alert()
+		alert("Hello, World!");
+		// js out method 3-by document.write()
+		function output() {
+			document.write("Hello, World!");
+		}
+		// js out method 4-by innerHTML property
+		function output2() {
+			document.getElementById("output").innerHTML = "Hello, World!";
+		}
+	</script>
+</head>
+<body>
+    <h1>OutMethod Test</h1>
+	<button onclick="output()">Click me out put 'Hello, World!'</button>
+	<h2 id="output">0</h2>
+	<button onclick="output2()">Click me replace '0' with 'Hello, World!'</button>
+</body>
+</html>
