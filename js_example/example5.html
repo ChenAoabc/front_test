@@ -27,9 +27,12 @@
 <body>
     <h1 style="text-align: center;">计算器</h1>
     <table id="mytable">
+        <!-- 结果展示区 -->
         <tr>
             <td id="result" colspan="4"></td>
         </tr>
+        
+        <!-- 功能按钮区 -->
         <tr>
             <td class="buttons" id="clearAll" onclick="clearAll()" 
             onmouseover="this.style.backgroundColor='#9ECED8'"
@@ -61,6 +64,7 @@
             onmouseover="this.style.backgroundColor='#9ECED8'"
             onmouseout="this.style.backgroundColor='#FFFFFF'">*</td>
         </tr>
+
         <tr>
             <td class="buttons" id="buttons4" onclick="addNumChar(this)"
             onmouseover="this.style.backgroundColor='#9ECED8'"
@@ -75,6 +79,7 @@
             onmouseover="this.style.backgroundColor='#9ECED8'"
             onmouseout="this.style.backgroundColor='#FFFFFF'">-</td>
         </tr>
+
         <tr>
             <td class="buttons" id="buttons1" onclick="addNumChar(this)"
             onmouseover="this.style.backgroundColor='#9ECED8'"
