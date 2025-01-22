@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CSS Backgrounds</title>
+    <meta charset="UTF-8">
+    <style type="text/css">
+        /* 
+        设置背景颜色
+        */
+        #firstHeading {
+            background-color: #008080;
+        }
+
+        /* 设置背景图片 */
+        #imageDiv {
+            width: 1500px;
+            height: 1500px;
+            border: #008080 5px solid;
+            background-repeat: no-repeat;
+            background-position:  center center;
+            background-image: url('./img/bg1.png');
+            background-attachment: fixed;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        CSS 背景属性用于定义HTML元素的背景。
+        主要用到的背景属性如下：
+        background-color: 设置背景颜色
+        background-image: 设置背景图片
+        background-repeat: 设置背景图片是否重复
+        background-position: 设置背景图片的位置
+        background-attachment: 设置背景图片是否固定或者随着页面的其余部分滚动
+        background-position: 设置背景图片的位置
+    -->
+        
+    <!-- 
+        1、background-color: 设置背景颜色
+        语法：background-color: color;
+        示例：background-color: #FF0000; /* 设置背景颜色为红色 */
+        注：在CSS中，颜色值通常以以下方式定义：
+            -十六进制。如#FF0000表示红色
+            -RGB值。如rgb(255,0,0)表示红色
+            -颜色名。如red表示红色
+    -->
+        <h1 id="firstHeading">This is a heading</h1>
+    <!-- 
+        2.background-image: 设置背景图片
+        语法: background-image: url("图片路径");
+        示例: background-image: url("https://www.example.com/image.jpg");
+        注: 
+            1、图片路径可以是相对路径或绝对路径。
+            2、默认情况下、背景图片进行平铺重复显示，以覆盖整个元素实体。
+    -->
+            
+    <!-- 
+        3.background-repeat: 设置背景重复方向
+        语法: background-repeat: 属性值;
+        示例: background-repeat: repeat;
+        属性值：
+            repeat: 背景图像将向垂直和水平方向重复。这是默认
+            no-repeat: 背景图像将只显示一次。
+            repeat-x: 背景图像将只在水平方向重复。
+            repeat-y: 背景图像将只在垂直方向重复。
+            inherit: 继承父元素的背景重复属性。
+    --> 
+        
+    <!-- 
+        4、background-attachment: 设置背景图片是否固定或者随着页面的其余部分滚动
+        语法: background-attachment: 属性值;
+        示例: background-attachment: scroll;
+        属性值:
+            scroll: 背景图像固定在元素实体上。这是默认值。
+            fixed: 背景图像固定在视窗上，不会随着页面的其余部分滚动。
+            inherit: 继承父元素的背景固定属性。
+            local: 背景图像固定在元素实体上，但可以滚动。
+            initial: 背景图像的固定属性为初始值。
+     -->
+
+    <!-- 
+        5、background-position: 设置背景图片的位置
+        语法: background-position: 属性值;
+        示例: background-position: top left;
+        属性值:
+            该属性值分为垂直和水平两个方向，可以用关键字表示。
+            其中 垂直方向关键字有：top、center、bottom
+            水平方向关键字有：left、center、right
+            也可以用百分比或像素值表示。
+    -->
+
+    <!-- 
+        语法简写：
+        background: color value|image value|repeat value|attachment value|position value;
+        示例: background: #FF0000 url("https://www.example.com/image.jpg") repeat-x top left;
+        注：上面语法简写中，并不是所有属性都需要写，可以只写需要的属性。
+    -->
+    <div id="imageDiv"></div>
+
+</body>
+</html>
